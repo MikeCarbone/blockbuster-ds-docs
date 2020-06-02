@@ -1,0 +1,60 @@
+---
+name: Template
+---
+
+# Template
+import { Box, Button, VertSpace } from 'blockbuster-design-system'
+
+<Box>
+    <Button margin="0 50px 0 0">Click this button</Button>
+    <VertSpace />
+    <Button secondary>Click this button</Button>
+</Box>
+
+```js
+import { Button } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Button>Click</Button>
+);
+```
+
+```jsx live=true
+    <Button secondary>Click</Button>
+```
+
+
+## Link Wrapping
+To use in Next.js or another toolkit that requires a custom parent for links, the button takes a `parentEl` prop that takes a JS component.
+```js
+import { Link } from 'next/link'
+
+export default function Home => (
+    <Button parentEl={ Link }>
+        Click
+    </Button>
+);
+```
+
+## Props
+
+### alignSelf
+
+Type: String <br />
+Options: Any valid CSS property <br />
+Default: center  <br />
+Description: align-self CSS property  <br />
+
+### margin
+
+Type: String <br />
+Options: Any valid CSS property <br />
+Default: 0  <br />
+Description: margin CSS property  <br />
+
+### secondary
+
+Type: Boolean <br />
+Options: true | false <br />
+Default: false  <br />
+Description: Whether to render the primary or secondary button  <br />

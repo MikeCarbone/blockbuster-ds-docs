@@ -2,31 +2,28 @@
 name: Getting started
 ---
 
-# Main Heading
+# Installing
 
-Officia do eu reprehenderit laborum exercitation eu nisi deserunt aliqua consequat eiusmod.
+You can begin by installing from the NPM registry:
 
-Duis incididunt fugiat est aliqua deserunt do aliquip laboris in exercitation laboris nulla minim incididunt.
+`npm install blockbuster-design-system`
 
-## Second Heading
 
-Quis ullamco id duis sit ipsum laborum fugiat occaecat. Commodo aliqua adipisicing non nisi. Dolore aute magna cupidatat qui quis laboris. Irure veniam deserunt veniam ullamco anim pariatur deserunt. Amet commodo aliqua ut fugiat sunt pariatur ullamco cillum duis ipsum amet anim incididunt. Ut esse dolore in ullamco enim sit cillum eu labore consectetur labore sunt.
+# Using
 
-### Third Heading
-
-Here is some code
-
+You can then import any of the components into your design like this:
 ```js
-const x = 'fucking'
-console.log('hello ' + x + ' world')
+import { Button, Global } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <>
+        <Global />
+        <Button>Click</Button>
+    </>
+);
 ```
 
-## Using the playground
-
-You can use live react code to display react component with a preview
-
-```jsx live=true
-<div style={{ wisth: 100, height: 100, background: 'lightblue' }}>
-    hello everyone
-</div>
-```
+## Styling
+This design system uses CSS variables for global theming.
+The variables are converted from JS to CSS in the `<Global />` component, so make sure to include it in whichever page you intend to use the components on.
+Or, include it in a separate page wrapper component.

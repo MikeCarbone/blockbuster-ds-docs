@@ -1,0 +1,41 @@
+---
+name: Heading
+---
+
+# Heading
+import { Global, Heading, VertSpace } from 'blockbuster-design-system'
+
+<>
+    <Heading color="var(--black)">H1</Heading>
+    <Heading size={2} color="var(--black)">H2</Heading>
+    <Heading size={3} color="var(--black)">H3</Heading>
+</>
+
+```js
+import { Heading } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Heading>This is an H1 tag but not</Heading>
+);
+```
+
+```jsx live=true
+    <Heading color="var(--black)">This is an H1 tag but not</Heading>
+```
+
+## Props
+
+### children
+Description: This is a container element and accepts children elements.
+
+### size
+
+Type: Integer <br />
+Options: 1 | 2 | 3 <br />
+Default: 1  <br />
+Description: Determines the output heading  <br />
+
+
+### Supported CSS props
+
+color <br/>

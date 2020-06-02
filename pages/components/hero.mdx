@@ -1,0 +1,115 @@
+---
+name: Hero
+---
+
+# Hero
+
+import { Copy, Hero } from 'blockbuster-design-system'
+
+<Hero
+    imgSrc="https://source.unsplash.com/random"
+    alt="A random unsplash picture."
+    title="This is a hero"
+    subtitle="Can we have a subtitle? Sure."
+    buttonText="Clieck"
+    buttonLink="/page"
+    linkWrapper={Copy}
+    height="400px"
+/>
+
+```js
+import { Hero } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Hero
+      imgSrc="https://source.unsplash.com/random"
+      alt="A random unsplash picture."
+      title="This is a hero"
+      subtitle="Can we have a subtitle? Sure."
+      buttonText="Clieck"
+      buttonLink="/page"
+      linkWrapper={Copy}
+      height="400px"
+    />
+);
+```
+
+```jsx live=true
+    <Hero
+      imgSrc="https://source.unsplash.com/random"
+      alt="A random unsplash picture."
+      title="This is a hero"
+      subtitle="Can we have a subtitle? Sure."
+      buttonText="Clieck"
+      buttonLink="/page"
+      linkWrapper={Copy}
+      height="400px"
+    />
+```
+
+
+## Link Wrapping
+To wrap links in a Next.js project or otherwise, you can pass custom elements to wrap the links.
+```js
+import { Link } as NextLink from 'next/link'
+
+export default function Home => (
+    <Hero
+      imgSrc="https://source.unsplash.com/random"
+      alt="A random unsplash picture."
+      title="This is a hero"
+      subtitle="Can we have a subtitle? Sure."
+      buttonText="Clieck"
+      buttonLink="/page"
+      linkWrapper={NextLink}
+      height="400px"
+    />
+);
+```
+
+## Props
+
+### alt
+Default: ""
+Description: Alternate text for the logo image
+
+### buttonLink
+Default: ""
+Type: String
+Description: Href for the button link
+
+### buttonText
+Default: ""
+Type: String
+
+### height
+Default: "400px"
+Type: String
+Description: Pass CSS properties through a string
+
+### imgSrc
+Default: ""
+Type: String
+
+### linkWrapper
+Default: {}
+Type: React Component
+Description: Component for link Wrapping
+
+### logo
+Default: ""
+Description: Path to the logo image
+
+### subtitle
+Default: ""
+Description: Smaller text on the hero
+
+### title
+Default: ""
+Description: Bigger text on the hero
+
+### video
+Type: Boolean
+Default: false
+Description: Determines whether the hero has a video background or not. Specify video as imageSrc prop.
+

@@ -1,0 +1,65 @@
+---
+name: Button
+---
+
+# Button
+import { Box, Button, VertSpace } from 'blockbuster-design-system'
+
+<Box>
+    <Button href="#" margin="0 50px 0 0">Click this button</Button>
+    <VertSpace />
+    <Button href="#" secondary>Click this button</Button>
+</Box>
+
+```js
+import { Button } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Button>Click</Button>
+);
+```
+
+```jsx live=true
+    <Button href="#" secondary>Click</Button>
+```
+
+
+## Link Wrapping
+To use in Next.js or another toolkit that requires a custom parent for links, the button takes a `parentEl` prop that takes a JS component.
+```js
+import { Link } from 'next/link'
+
+export default function Home => (
+    <Button href="#" parentEl={ Link }>
+        Click
+    </Button>
+);
+```
+
+## Props
+
+### children
+Description: This is a container element and accepts children elements.
+
+### secondary
+
+Type: Boolean <br />
+Default: false  <br />
+Description: Whether to render the primary or secondary button  <br />
+
+### parentEl
+
+Type: Object <br />
+Default: {}  <br />
+Description: For handling custom links   <br />
+
+### href
+
+Type: String <br />
+Default: ""  <br />
+Description: Href for the underlying link   <br />
+
+### Supported CSS props
+
+alignSelf <br/>
+margin <br/>

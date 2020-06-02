@@ -1,0 +1,49 @@
+---
+name: Box
+---
+
+# Box
+import { Box, Heading, Copy } from 'blockbuster-design-system'
+
+<Box border="5px solid var(--black)" justifyContent="center">
+    <Heading size={3} color="var(--black)">A box is containing this element</Heading>
+</Box>
+
+```js
+import { Box } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Box padding="1rem" border="5px solid var(--black)" justifyContent="center">
+        <Heading size={3} color="var(--black)">A box is containing this element</Heading>
+        // {...children}
+    </Box>
+);
+```
+
+```jsx live=true
+    <Box border="5px solid var(--black)" flexDirection="column" justifyContent="center">
+        <Heading color="var(--black)" size={3}>A heading within a box</Heading>
+    </Box>
+```
+
+## Props
+
+### Supported CSS props
+
+alignSelf <br/>
+background <br/>
+backgroundColor <br/>
+backgroundPosition <br/>
+backgroundRepeat <br/>
+backgroundSize <br/>
+border <br/>
+display <br/>
+flexDirection <br/>
+flexWrap <br/>
+height <br/>
+margin <br/>
+maxHeight <br/>
+maxWidth <br/>
+minHeight <br/>
+overflowX <br/>
+padding <br/>

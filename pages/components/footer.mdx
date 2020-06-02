@@ -1,0 +1,38 @@
+---
+name: Footer
+---
+
+# Footer
+
+import { Footer } from 'blockbuster-design-system'
+
+<Footer />
+
+```js
+import { Footer } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Footer />
+);
+```
+
+```jsx live=true
+    <Footer />
+```
+
+
+## Link Wrapping
+To wrap links in a Next.js project or otherwise, you can pass custom elements to wrap the links.
+```js
+import { Link } from 'next/link'
+
+export default function Home => (
+    <Footer linkWrapper={Link} />
+);
+```
+
+## Props
+
+### linkWrapper
+Default: {}
+Description: Parent component for link wrapping.

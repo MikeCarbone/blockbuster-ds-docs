@@ -1,0 +1,83 @@
+---
+name: Header
+---
+
+# Header
+
+import { Box, Copy, Header } from 'blockbuster-design-system'
+
+<Box height="200px">
+    <Header
+        buttonText="Log In"
+        buttonLink="/page"
+        linkWrapper={Copy}
+        logo="https://source.unsplash.com/random"
+        alt="Blockbuster"
+    />
+</Box>
+
+```js
+import { Header } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Header
+      buttonText="Log In"
+      buttonLink="/page"
+      linkWrapper={Copy}
+      logo="https://source.unsplash.com/random"
+      alt="Blockbuster"
+    />
+);
+```
+
+```jsx live=true
+    <Header
+      buttonText="Log In"
+      buttonLink="/page"
+      linkWrapper={Copy}
+      logo="https://source.unsplash.com/random"
+      alt="Blockbuster"
+    />
+```
+
+
+## Link Wrapping
+To wrap links in a Next.js project or otherwise, you can pass custom elements to wrap the links.
+```js
+import { Link } from 'next/link'
+
+export default function Home => (
+    <Header
+      buttonText="Log In"
+      buttonLink="/page"
+      linkWrapper={Copy}
+      logo="https://source.unsplash.com/random"
+      alt="Blockbuster"
+    />
+);
+```
+
+## Props
+
+### buttonText
+Default: ""
+Type: String
+
+### buttonLink
+Default: ""
+Type: String
+Description: Href for the button link
+
+### linkWrapper
+Default: {}
+Type: React Component
+Description: Component for link Wrapping
+
+### logo
+Default: ""
+Description: Path to the logo image
+buttonText: "Log In"
+
+### alt
+Default: ""
+Description: Alternate text for the logo image

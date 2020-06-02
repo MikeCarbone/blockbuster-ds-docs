@@ -1,0 +1,72 @@
+---
+name: Vertical Space
+---
+
+# Vertical Space
+import { Copy, VertSpace } from 'blockbuster-design-system'
+
+<Copy margin="0" color="var(--black)">
+    Below is default vertical space.
+</Copy>
+<VertSpace />
+<Copy margin="0" color="var(--black)">
+    Below is vertical space size 1.
+</Copy>
+<VertSpace size={1} />
+<Copy margin="0" color="var(--black)">
+    Below is vertical space size 2.
+</Copy>
+<VertSpace size={2} />
+<Copy margin="0" color="var(--black)">
+    Below is vertical space size 3.
+</Copy>
+<VertSpace size={3} />
+<Copy margin="0" color="var(--black)">
+    Above is vertical space size 3.
+</Copy>
+
+    
+
+
+```js
+import { Copy } from 'blockbuster-design-system`
+    
+export default function Home => (
+<>
+    <VertSpace />
+    <VertSpace size={1} />
+    <VertSpace size={2} />
+    <VertSpace size={3} />
+</>
+);
+```
+
+```jsx live=true
+    <>
+        <Copy margin="0" color="var(--black)">
+            Below is default vertical space.
+        </Copy>
+        <VertSpace />
+        <Copy margin="0" color="var(--black)">
+            Below is vertical space size 1.
+        </Copy>
+        <VertSpace size={1} />
+        <Copy margin="0" color="var(--black)">
+            Below is vertical space size 2.
+        </Copy>
+        <VertSpace size={2} />
+        <Copy margin="0" color="var(--black)">
+            Below is vertical space size 3.
+        </Copy>
+        <VertSpace size={3} />
+        <Copy margin="0" color="var(--black)">
+            Above is vertical space size 3.
+        </Copy>
+    </>
+```
+
+## Props
+
+### size
+Options: 1 | 2 | 3 <br />
+Description: This is a container element and accepts children elements.

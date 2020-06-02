@@ -1,0 +1,54 @@
+---
+name: Link
+---
+
+# Link
+import { Link } from 'blockbuster-design-system'
+
+<Link href="#">This is a link!</Link>
+
+```js
+import { Link } from 'blockbuster-design-system`
+    
+export default function Home => (
+    <Link href="#">This is a link!</Link>
+);
+```
+
+```jsx live=true
+    <Link href="#">This is a link!</Link>
+```
+
+
+## Link Wrapping
+To use in Next.js or another toolkit that requires a custom parent for links, the button takes a `parentEl` prop that takes a JS component.
+```js
+import { NextLink } from 'next/link'
+
+export default function Home => (
+    <Link href="#" parentEl={ NextLink }>
+        This is a link theoretically wrapped in a Next.js link!
+    </Link>
+);
+```
+
+## Props
+
+### children
+Description: This is a container element and accepts children elements.
+
+### parentEl
+
+Type: Object <br />
+Default: {}  <br />
+Description: For handling custom links   <br />
+
+### href
+
+Type: String <br />
+Default: ""  <br />
+Description: Href for the underlying link   <br />
+
+### Supported CSS props
+
+color <br/>
