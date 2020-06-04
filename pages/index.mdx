@@ -34,3 +34,6 @@ Make sure to add this Google fonts link within your project to make sure the pro
 ```js
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet" />
 ```
+
+## Responsive Design
+The variables are designed with responsiveness in mind. Most elements, if used correctly, should be automatically responsive. For more flexibility, the `<Box>` component takes a `flex-direction` prop, where you can then pass `var(--resp-flex-directon)` in. This will have its contents in a row on screens larger than 800px, but automatically shift to column below 800px.
