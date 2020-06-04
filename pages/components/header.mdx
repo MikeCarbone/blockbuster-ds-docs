@@ -4,41 +4,60 @@ name: Header
 
 # Header
 
-import { Box, Copy, Header } from 'blockbuster-design-system'
+import { Box, Link, Header } from 'blockbuster-design-system'
 
-<Box height="200px">
+<Box>
     <Header
         buttonText="Log In"
         buttonLink="/page"
-        linkWrapper={Copy}
-        logo="https://source.unsplash.com/random"
-        alt="Blockbuster"
-    />
+    >
+      <Link color="var(--white)" href="#">Home</Link>
+      <Link color="var(--white)" href="#">About</Link>
+    </Header>
 </Box>
 
 ```js
-import { Header } from 'blockbuster-design-system`
+import { Header, Link } from 'blockbuster-design-system`
     
 export default function Home => (
     <Header
-      buttonText="Log In"
-      buttonLink="/page"
-      linkWrapper={Copy}
-      logo="https://source.unsplash.com/random"
-      alt="Blockbuster"
-    />
+        buttonText="Log In"
+        buttonLink="/page"
+    >
+      <Link color="var(--white)" href="#">Home</Link>
+      <Link color="var(--white)" href="#">About</Link>
+    </Header>
 );
 ```
 
 ```jsx live=true
     <Header
-      buttonText="Log In"
-      buttonLink="/page"
-      linkWrapper={Copy}
-      logo="https://source.unsplash.com/random"
-      alt="Blockbuster"
-    />
+        buttonText="Log In"
+        buttonLink="/page"
+    >
+      <Link color="var(--white)" href="#">Home</Link>
+      <Link color="var(--white)" href="#">About</Link>
+    </Header>
 ```
+
+## Adding Links
+Links can be added by passing them in as children. So for example:
+```js
+import { Header, Link } from 'blockbuster-design-system'
+
+<Header>
+      <Link color="var(--white)" href="#">Home</Link>
+      <Link color="var(--white)" href="#">About</Link>
+</Header>
+
+```
+
+## Optional Button
+The button will only render if you pass in the `buttonText` prop. Example without the button:
+<Header>
+      <Link color="var(--white)" href="#">Home</Link>
+      <Link color="var(--white)" href="#">About</Link>
+</Header>
 
 
 ## Link Wrapping
@@ -51,8 +70,6 @@ export default function Home => (
       buttonText="Log In"
       buttonLink="/page"
       linkWrapper={Copy}
-      logo="https://source.unsplash.com/random"
-      alt="Blockbuster"
     />
 );
 ```
@@ -60,6 +77,10 @@ export default function Home => (
 ## Props
 
 ### buttonText
+Default: ""
+Type: String
+
+### children
 Default: ""
 Type: String
 
@@ -72,12 +93,3 @@ Description: Href for the button link
 Default: {}
 Type: React Component
 Description: Component for link Wrapping
-
-### logo
-Default: ""
-Description: Path to the logo image
-buttonText: "Log In"
-
-### alt
-Default: ""
-Description: Alternate text for the logo image
